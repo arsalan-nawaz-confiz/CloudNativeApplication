@@ -14,6 +14,20 @@ https://steeltoe.io/
 - Spring Tool Suite 4
 - Visual Studio 19
 
+# How to start Docker Container containing Elastic Search, MongoDb and Kibana
+Open the commandline to the and goto the folder ..\CloudNativeApplication\NetMicroservice and write the command
+
+```bash
+$ docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d
+ ```
+
+# How to start Docker Container for Zipkin
+Open the commandline to the and goto the folder ..\CloudNativeApplication\Zipkin and write the command
+
+```bash
+$ docker-compose -f docker-compose-slim.yml up
+```
+
 # Steps for starting the application
 - Start the Eureka Server from the Spring Tool Suite
 - Start the docker container for MongoDb, Elastic Search, Kibana and the container for the Zipkin server
