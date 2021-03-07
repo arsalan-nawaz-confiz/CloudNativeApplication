@@ -1,0 +1,58 @@
+version: '3.4'
+
+services:
+    catalogdb:
+        container_name: catalogdb
+        restart: always
+        volumes:
+            - ${WEBAPP_STORAGE_HOME}/site:/data/db
+        ports:
+            - "27017:27017"
+
+
+    catalog.api:
+        container_name: catalogapi
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+            - "CatalogDatabaseSettings:ConnectionString=mongodb://catalogdb:27017"
+        depends_on:
+            - catalogdb
+        volumes:
+                - ${HOME}/.microsoft/usersecrets/:/root/.microsoft/usersecrets
+                - ${HOME}/.aspnet/https:/root/.aspnet/https/
+        ports:
+            - "8000:80"
+
+
+    elasticsearch:  
+        container_name: elasticsearch  
+        ports:  
+            - 9200:9200  
+        volumes:  
+            - elasticsearch-data:/usr/share/elasticsearch/data  
+        environment:  
+            - xpack.monitoring.enabled=true  
+            - xpack.watcher.enabled=false  
+            - "ES_JAVA_OPTS=-Xms512m -Xmx512m"  
+            - discovery.type=single-node  
+        networks:  
+            - elastic 
+
+    kibana:  
+        container_name: kibana  
+        ports:  
+            - 5601:5601  
+        depends_on:  
+            - elasticsearch  
+        environment:  
+            - ELASTICSEARCH_URL=http://localhost:9200  
+        networks:  
+            - elastic  
+
+volumes:
+  elasticsearch-data:
+    driver: local
+
+networks:
+  elastic:
+    driver: bridge

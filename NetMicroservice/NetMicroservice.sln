@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElasticSearchLogging", "Common\ELK.Logging\ElasticSearchLogging.csproj", "{E78FA7A2-A4B9-4CA3-BBF7-1330DB445587}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.API", "Catalog.API\Catalog.API.csproj", "{24A51AC9-F1FC-41EF-A38E-60FC04AE3462}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{4EBBF3CD-6A18-4AA9-BB6C-1BAB67E8B72F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E78FA7A2-A4B9-4CA3-BBF7-1330DB445587}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E78FA7A2-A4B9-4CA3-BBF7-1330DB445587}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E78FA7A2-A4B9-4CA3-BBF7-1330DB445587}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E78FA7A2-A4B9-4CA3-BBF7-1330DB445587}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24A51AC9-F1FC-41EF-A38E-60FC04AE3462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24A51AC9-F1FC-41EF-A38E-60FC04AE3462}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24A51AC9-F1FC-41EF-A38E-60FC04AE3462}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24A51AC9-F1FC-41EF-A38E-60FC04AE3462}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EBBF3CD-6A18-4AA9-BB6C-1BAB67E8B72F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EBBF3CD-6A18-4AA9-BB6C-1BAB67E8B72F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EBBF3CD-6A18-4AA9-BB6C-1BAB67E8B72F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EBBF3CD-6A18-4AA9-BB6C-1BAB67E8B72F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C1226AF-BB68-41AA-ADE0-76996D3E3B2A}
+	EndGlobalSection
+EndGlobal

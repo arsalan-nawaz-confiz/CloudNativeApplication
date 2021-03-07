@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "4ONWfWGW5ss5pdBawqivEL7kynSKHIBwOpwLEQmbF2kfZk5F3njrWB473EwKbqWb9K7W3+ICXIv/9G2fInEepg==",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\Personal\\CloudNative-master1\\OrdersDotNetCore\\Order.Api\\Order.Api\\Order.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\akhan\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
+  ],
+  "logs": []
+}
